@@ -1,0 +1,82 @@
+body {
+    padding-top: 21px;
+
+}
+
+.l-container
+{
+    max-width: $gridWidth; 
+    margin: auto;
+    @include background-grid();
+}
+
+.l-twocolumns{
+    padding-top: 36px;
+    border-bottom: 1px solid $grey;
+    @include clearfix();
+    clear:both; /*todo*/
+}
+
+.l-twocolumns-allarticles {
+    padding-top: 0;
+}
+
+.l-twocolumns-inner {
+    margin-top: 22px;
+}
+
+.l-contentbar,
+article
+{
+    @include grid-span(8);
+}
+
+aside
+{
+    @include grid-span(4);
+}
+
+.l-contentbar-allarticles {
+    @include grid-span(9);
+}
+
+.l-aside-allarticles {
+    @include grid-span(3);
+}
+
+.allarticles-h1-maintop {
+    margin-top: 25px; 
+}
+
+.allarticles-h1-mainarticles,
+.allarticles-h1-mainadvices {
+    margin-top: 25px !important; 
+}
+
+.l-maintop {
+    margin-top: 12px;
+    border-bottom: 1px solid $grey;
+    @include clearfix();
+}
+
+.l-maintop .previewlist {
+    @include grid-span(3);
+}
+
+.l-mainarticles, .l-mainadvices {
+    margin-top: 11px;
+    border-bottom: 1px solid $grey;
+    @include clearfix();
+}
+.l-mainarticles .previewlist,
+.l-mainadvices  .previewlist {
+    @include grid-span(6);
+    .previewlist-one {
+        @include grid-span(3,1,6);
+    }
+}
+
+.allarticles-h1-mainquestion {
+    line-height: (36/28) !important;
+    margin-top: 42px !important; 
+}
